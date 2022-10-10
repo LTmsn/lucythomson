@@ -1,0 +1,42 @@
+/*
+#220901 - black
+#F6E8EA - white
+#5AA9E6 - blue
+#FFE45E - yellow
+#FF6392 - pink
+*/
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #F6E8EA;
+    font-size: 200%;
+    letter-spacing: 10px;
+}
+
+body {
+    background-color: #FFE45E;
+    color: #220901;
+}
+
+.main {
+    max-width: 750px;
+    background-color: #F6E8EA;
+    text-align: center;
+    margin: auto;
+}
+
+a {
+    color: #5AA9E6;
+    text-shadow: 2px 2px 5px #FF6392;
+}
+
+a:hover {
+    color: #220901;
+}
+
+ul {
+    list-style-type: none;
+}
