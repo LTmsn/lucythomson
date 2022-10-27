@@ -1,0 +1,12 @@
+.navbar {
+    background-color: #808080;
+}
+
+.mid {
+    background-color: gray;
+    padding: 0.1em;
+}
+
+.mid p {
+    text-align: center;
+}
