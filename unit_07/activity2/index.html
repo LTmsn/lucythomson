@@ -4,9 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css.css" rel="stylesheet" type="text/css">
+
     <title>Document</title>
 </head>
 <body>
-    
+    <h1>Tip Calculator</h1>
+    <form>
+        <label for="amount">Enter Total Bill Amount:</label><br>
+        <input type="text" id="amount" name="amount"><br><br>
+
+        <p>Select tip:</p>
+        <div class="radio-toolbar">
+            <input type="radio" id="5-perc" name="radios" value="1.05" checked>
+            <label for="5-perc">5%</label>
+          
+            <input type="radio" id="10-perc" name="radios" value="1.1">
+            <label for="10-perc">10%</label>
+          
+            <input type="radio" id="25-perc" name="radios" value="1.25">
+            <label for="25-perc">25%</label>
+        </div>
+    </form>
+
+    <p>Tip to give:</p>
+    <h2 id="total">£xx.xx</h2>
+
+    <script src="script.js"></script>
 </body>
 </html>
