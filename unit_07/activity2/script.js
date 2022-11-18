@@ -1,28 +1,37 @@
-var five = document.getElementById("5-perc");
-var ten = document.getElementById("10-perc");
-var twentyFive = document.getElementById("25-perc");
+var five = $('#5-perc');
+var ten = $('#10-perc');
+var twentyFive = $('#25-perc');
 var amount = 0;
 
 function update()
 {
-    document.getElementById("total").innerHTML = "£xx.xx";
+    amount = $('#amount').value;
 
-    amount = document.getElementById("amount").value;
-    var perc = checked().value;
-
-    var total = amount * perc;
+    if (twentyFive.checked = true) {
+        total = amount + checked();
+    } else {
+        total = amount * checked();
+    }
     
     if (amount != 0) {
-        document.getElementById("total").innerHTML = "£" + total;
+        $('total').innerHTML = "£" + total;
+    } else {
+        $('total').innerHTML = "£xx.xx"
     }
 }
 
 function checked() {
     if (five.checked == true) {
-        return five;
+        return 1.05;
     } else if (ten.checked == true) {
-        return ten;
+        return 1.1;
+    } else if (twentyFive.checked){
+        return 1.25;
     } else {
-        return twentyFive;
+        if (amount*1.25 < 2 + amount.value*twentyFive.value) {
+            return 2 + amount.value * twentyFive.value;
+        } else {
+            return 1.25;
+        }
     }
 }

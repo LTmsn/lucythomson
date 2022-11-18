@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css.css" rel="stylesheet" type="text/css">
+
+    <title>Document</title>
+
+    <script>
+        $( function() {
+            $( "#selectable" ).selectable();
+        });
+    </script>
+</head>
+<body>
+    <h1>Tip Calculator</h1>
+    <form>
+        <label for="amount">Enter Total Bill Amount:</label><br>
+        <input type="input" name="amount" id="amount">
+        <ol id="selectable">
+            <li>10</li>
+            <li>20</li>
+            <li>30</li>
+            <li>40</li>
+        </ol>
+
+        <p>Select tip:</p>
+        <div class="radio-toolbar">
+            <input onclick="update()" type="radio" id="5-perc" name="radios" value="1.05">
+            <label for="5-perc">5%</label>
+          
+            <input onclick="update()" type="radio" id="10-perc" name="radios" value="1.1">
+            <label for="10-perc">10%</label>
+          
+            <input onclick="update()" type="radio" id="25-perc" name="radios" value="1.25">
+            <label for="25-perc">25%</label><br><br>
+
+            <input onclick="update()" type="radio" id="largest" name="radios" value="1.1">
+            <label for="largest">Largest from 25% or £2 + 10%</label>
+        </div>
+    </form>
+
+    <p>Tip to give:</p>
+    <h2 id="total">£xx.xx</h2>
+
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+</body>
+</html>
