@@ -33,7 +33,8 @@ function display() {
         let movies = data['Search'];
 
         let row = createNode('div');
-        row.className = 'row';
+        row.setAttribute('class', 'row');
+        row.setAttribute('id', 'row');
         append(container, row);
 
         movies.forEach(movie => {
@@ -41,16 +42,21 @@ function display() {
             let p = createNode('p'),
             card = createNode('div'),
             col = createNode('div'),
-            img = createNode('img');
-            col.className = 'col col-3';
-            card.className = 'card';
-            img.src = movie['Poster'];
-            p.innerHTML = movie['Title'];
+            img = createNode('img'),
+            button = createNode('button');
+            col.setAttribute('class', 'col col-3');
+            card.setAttribute('class', 'card');
+            img.setAttribute('src', movie.Poster);
+            button.setAttribute('class', 'btn btn-primary position-bottom position-relative');
+            button.setAttribute('href', 'info.html');
+            button.innerHTML = "More Info";
+            p.innerHTML = movie.Title;
             
             append(row, col);
             append(col, card);
             append(card, img);
             append(card, p);
+            append(card, button);
           }
       });
     })
